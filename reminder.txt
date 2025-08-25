@@ -1,0 +1,4 @@
+Each block due to their size must be incemented by 200 on x or z and y by 100 to maintain the grid style.
+The character however are incremented by 2 on x&z and 1 on y.
+
+The scales we use are 1x on characters and 0.02 on blocks.
