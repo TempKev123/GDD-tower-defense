@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 842ef85ecb0d9444ebcedd1f2c9fc299, type: 3}
-  m_Name: Archer
-  m_EditorClassIdentifier: Assembly-CSharp::Cards
+  m_Name: Mage
+  m_EditorClassIdentifier: 
   plantSprite: {fileID: 0}
-  plantIcon: {fileID: 2800000, guid: cfbd49c71cf0cf7419912acc497049d6, type: 3}
-  prefab: {fileID: 472932964469190069, guid: 1e0a8776943ad5f46a1ddedea04d36d5, type: 3}
-  cost: 10
+  plantIcon: {fileID: 0}
+  prefab: {fileID: 3360938925188842246, guid: 14ff82f097ab8f948bd78e92d987aaee, type: 3}
+  cost: 25
   cooldown: 0
