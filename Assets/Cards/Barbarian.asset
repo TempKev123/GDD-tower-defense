@@ -16,4 +16,4 @@ MonoBehaviour:
   plantIcon: {fileID: 2800000, guid: d3652c1e2a21f1e4a928e6ec29855a21, type: 3}
   prefab: {fileID: 3984814910009540976, guid: c0af310d6c21bf148983f5a48c30b0c9, type: 3}
   cost: 15
-  cooldown: 0
+  cooldown: 10
