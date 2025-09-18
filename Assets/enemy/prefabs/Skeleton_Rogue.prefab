@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_Rogue
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14f5357ce68797f4197680121c5b1578, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65,6 +69,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f5357ce68797f4197680121c5b1578, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1982036004064041800}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f5357ce68797f4197680121c5b1578, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 174876086306926300}
   m_SourcePrefab: {fileID: 100100000, guid: 14f5357ce68797f4197680121c5b1578, type: 3}
 --- !u!1 &7459423286345051341 stripped
 GameObject:
@@ -83,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4190950fa531aefa6ca20c975c5cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 5
   speed: 3
 --- !u!54 &7955887480370415
 Rigidbody:
@@ -132,3 +140,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9176521, y: 2.5433242, z: 1.2502689}
   m_Center: {x: -0.062567234, y: 1.2513438, z: 0.020855904}
+--- !u!114 &174876086306926300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459423286345051341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ac2964b6ed7ddc8b365c58881164de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadlyTag: Player
+  hp: 5
+  damageInterval: 1
