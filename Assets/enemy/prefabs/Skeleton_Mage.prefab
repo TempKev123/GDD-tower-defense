@@ -71,7 +71,7 @@ PrefabInstance:
       addedObject: {fileID: 1791625367323900811}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 501ed5cd901bdb5da920342180b0321c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 119035508154225101}
+      addedObject: {fileID: 5022720996837588268}
   m_SourcePrefab: {fileID: 100100000, guid: 501ed5cd901bdb5da920342180b0321c, type: 3}
 --- !u!1 &5512122710430589242 stripped
 GameObject:
@@ -139,7 +139,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9177158, y: 2.6893687, z: 1.709095}
   m_Center: {x: 0.020872235, y: 1.3452351, z: 0.041711807}
---- !u!114 &119035508154225101
+--- !u!114 &5022720996837588268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,6 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ac2964b6ed7ddc8b365c58881164de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadlyTag: Melee
   hp: 5
   damageInterval: 1
