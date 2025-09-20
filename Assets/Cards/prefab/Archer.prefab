@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4852159869342073526
+--- !u!1001 &4558867123979285630
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.037
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -65,27 +65,33 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 737099477977774014}
+      addedObject: {fileID: 440098947014289081}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2252124778958032338}
+      addedObject: {fileID: -7468646913360069298}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7291497609387633967}
+      addedObject: {fileID: 266940989061428404}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4179217553767097514}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4201548149648749087}
   m_SourcePrefab: {fileID: 100100000, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
---- !u!1 &5735119036069937127 stripped
+--- !u!1 &3712426996734675247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-  m_PrefabInstance: {fileID: 4852159869342073526}
+  m_PrefabInstance: {fileID: 4558867123979285630}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &737099477977774014
+--- !u!95 &440098947014289081
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5735119036069937127}
+  m_GameObject: {fileID: 3712426996734675247}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1943a9c5db727b846b227f4259964420, type: 3}
   m_Controller: {fileID: 9100000, guid: 96aac30a4af545546ac653c7bed235a5, type: 2}
@@ -99,13 +105,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &-2252124778958032338
+--- !u!114 &-7468646913360069298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712426996734675247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d954780a2e6c98919e47cc2eb836d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileSize: 1
+  tileOffset: {x: 0, y: 0, z: 0}
+--- !u!65 &266940989061428404
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5735119036069937127}
+  m_GameObject: {fileID: 3712426996734675247}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -120,17 +140,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &7291497609387633967
+--- !u!114 &-4179217553767097514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5735119036069937127}
+  m_GameObject: {fileID: 3712426996734675247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d954780a2e6c98919e47cc2eb836d8e, type: 3}
+  m_Script: {fileID: 11500000, guid: ad645bbe3488718498652d6b00cc62fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileSize: 1
-  tileOffset: {x: 0, y: 0, z: 0}
+  deadlyTag: enemy
+  hp: 10
+  damageInterval: 1
+  damagePerTick: 1
+--- !u!114 &4201548149648749087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712426996734675247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3740577468de3044dbe4e462bbad3af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 2658285453452077656, guid: 4d5b1e83690863f42b57cc06a856dc5a, type: 3}
+  firePoint: {fileID: 0}
+  arrowSpeed: 10
+  fireRate: 1
