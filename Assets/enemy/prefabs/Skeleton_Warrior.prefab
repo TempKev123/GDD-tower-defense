@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 9027127462904530838, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3624
@@ -125,6 +129,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 30916562180438780}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -929846695872287705}
   m_SourcePrefab: {fileID: 100100000, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
 --- !u!1 &3013229725613435590 stripped
 GameObject:
@@ -192,3 +199,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-929846695872287705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013229725613435590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ac2964b6ed7ddc8b365c58881164de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  damageInterval: 1
