@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012159, y: 0}
-  m_SizeDelta: {x: 68.0991, y: 70.121}
+  m_AnchoredPosition: {x: -0.000012159, y: 3.1628}
+  m_SizeDelta: {x: 68.0991, y: 63.7953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3334446455976849597
 CanvasRenderer:
@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 4698233845698060493}
   - component: {fileID: 3268494809385755955}
   - component: {fileID: 7285325731694093249}
+  - component: {fileID: 5524740072888109579}
   m_Layer: 5
   m_Name: card
   m_TagString: Untagged
@@ -245,7 +246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308.1, y: 0.000021935}
+  m_AnchoredPosition: {x: -308, y: -0.5}
   m_SizeDelta: {x: 85.312, y: 87.4103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3268494809385755955
@@ -286,3 +287,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5524740072888109579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989392868045129011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e1c1fd0c1507543bd987e33f87edae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardData: {fileID: 0}
+  tileSize: 1
+  tileOffset: {x: 0, y: 1, z: 0}

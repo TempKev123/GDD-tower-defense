@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842ef85ecb0d9444ebcedd1f2c9fc299, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  plantSprite: {fileID: 0}
+  plantIcon: {fileID: 2800000, guid: b16cc9133a916ef44aa3720fdb284211, type: 3}
+  prefab: {fileID: 3360938925188842246, guid: 14ff82f097ab8f948bd78e92d987aaee, type: 3}
+  cost: 25
+  cooldown: 10

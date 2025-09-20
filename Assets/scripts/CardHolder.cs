@@ -8,9 +8,9 @@ public class CardHolder : MonoBehaviour
 {
     [Header("Cards Parameters")]
     public int amtOfCards;
-    public Cards[] plantCardSO;          // ScriptableObjects (array)
-    public GameObject cardPrefab;        // prefab for UI card
-    public Transform cardHolderTransform;
+    public CardScriptableObject[] plantCardSO;   // ScriptableObjects (array)
+    public GameObject cardPrefab;                // prefab for UI card
+    public Transform cardHolderTransform;        // parent container in Canvas
 
     [Header("Plant Parameters (debug only)")]
     public GameObject[] plantCards;
@@ -31,16 +31,33 @@ public class CardHolder : MonoBehaviour
 
     public void AddPlantCard(int index)
     {
-        GameObject card = Instantiate(cardPrefab, cardHolderTransform);
+        if (plantCardSO[index] == null)
+        {
+            Debug.LogError($"CardHolder: plantCardSO[{index}] is null!");
+            return;
+        }
 
+        // Spawn UI card
+        GameObject card = Instantiate(cardPrefab, cardHolderTransform);
         plantCards[index] = card;
+
+        // Assign data to DragAndPlace script
+        DragAndPlace placeScript = card.GetComponent<DragAndPlace>();
+        if (placeScript != null)
+        {
+            placeScript.cardData = plantCardSO[index];
+        }
+        else
+        {
+            Debug.LogError("CardHolder: cardPrefab has no DragAndPlace script!");
+        }
 
         // Debug vars (optional)
         plantIcon = plantCardSO[index].plantIcon;
         cost = plantCardSO[index].cost;
         cooldown = plantCardSO[index].cooldown;
 
-        // Updating UI
+        // Update UI
         RawImage rawImg = card.GetComponentInChildren<RawImage>();
         if (rawImg != null && plantIcon != null)
             rawImg.texture = plantIcon;
