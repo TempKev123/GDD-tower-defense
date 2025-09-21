@@ -17,3 +17,4 @@ MonoBehaviour:
   prefab: {fileID: 3984814910009540976, guid: c0af310d6c21bf148983f5a48c30b0c9, type: 3}
   cost: 15
   cooldown: 10
+  iconPrefab: {fileID: 5019341358589644169, guid: 431ecc891a77c474296082be95e8b692, type: 3}

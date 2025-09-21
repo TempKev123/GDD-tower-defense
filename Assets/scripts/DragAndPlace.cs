@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEditor;
 #endif
 
-// [ExecuteAlways] ❌ เอาออก เพื่อกันไม่ให้ UI โดน snap ตอนแก้ใน Scene
+// Drag and Place system (with Ghost Icon Preview)
 public class DragAndPlace : MonoBehaviour, IPointerClickHandler
 {
     [Header("Card Data")]
@@ -18,7 +18,7 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
     private GameObject previewModel;
 
     [Header("Grid Settings")]
-    public int tileSize = 1;                 
+    public int tileSize = 1;
     public Vector3 tileOffset = Vector3.zero;
 
     private void Awake()
@@ -73,8 +73,11 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
 
         if (!isPlacing)
         {
-            previewModel = Instantiate(cardData.prefab);
-            MakeTransparent(previewModel, 0.5f);
+            // ใช้ iconPrefab ถ้ามี, ไม่งั้น fallback ไปใช้ prefab จริง
+            GameObject ghost = cardData.iconPrefab != null ? cardData.iconPrefab : cardData.prefab;
+
+            previewModel = Instantiate(ghost);
+            MakeTransparent(previewModel, 0.5f); // ทำ ghost ให้โปร่งใส
             isPlacing = true;
             Debug.Log("Preview active for: " + cardData.name);
         }
@@ -82,26 +85,52 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
 
     // วางจริง
     private void FinalizePlacement()
+{
+    if (previewModel != null)
     {
-        if (previewModel != null)
+        if (GameManager.Instance.CanAfford(cardData.cost))
         {
-            if (GameManager.Instance.CanAfford(cardData.cost))
-            {
-                GameManager.Instance.SpendCoins(cardData.cost);
+            Vector3 finalPos = previewModel.transform.position;
 
-                MakeTransparent(previewModel, 1f);
-                previewModel = null;
-                isPlacing = false;
+            // ✅ เช็กว่ามี unit อยู่แล้วหรือไม่ (ทั้ง Melee และ Ranged)
+            float checkRadius = tileSize * 0.9f;
+            Collider[] hits = Physics.OverlapSphere(finalPos, checkRadius);
 
-                Debug.Log("Placed " + cardData.name);
-            }
-            else
+            foreach (Collider c in hits)
             {
-                Debug.Log("Not enough coins at placement!");
-                CancelPlacement();
+                if (c.CompareTag("Melee") || c.CompareTag("Ranged"))
+                {
+                    Debug.Log("Cannot place here! Slot already occupied.");
+                    CancelPlacement();
+                    return; // ❌ ยกเลิกการวางทันที
+                }
             }
+
+            // ✅ ไม่มี unit → วางจริง
+            GameManager.Instance.SpendCoins(cardData.cost);
+
+            Quaternion finalRot = previewModel.transform.rotation;
+            Destroy(previewModel);
+
+            GameObject placed = Instantiate(cardData.prefab, finalPos, finalRot);
+
+            // 👇 ถ้าอยากให้ tag auto-match ตาม prefab ที่ตั้งไว้
+            placed.tag = cardData.prefab.tag;
+
+            previewModel = null;
+            isPlacing = false;
+
+            Debug.Log("Placed " + cardData.name);
+        }
+        else
+        {
+            Debug.Log("Not enough coins at placement!");
+            CancelPlacement();
         }
     }
+    }
+
+    
 
     // ยกเลิก
     private void CancelPlacement()

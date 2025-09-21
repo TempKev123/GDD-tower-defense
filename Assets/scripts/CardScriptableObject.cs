@@ -9,4 +9,5 @@ public class CardScriptableObject : ScriptableObject
     public GameObject prefab;    // actual plant prefab
     public int cost;             // sun or resource cost
     public float cooldown;       // time between uses
+    public GameObject iconPrefab;
 }
