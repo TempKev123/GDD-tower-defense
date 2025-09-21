@@ -24,6 +24,14 @@ public class EnemyCollisionManager : MonoBehaviour
             );
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("projectile"))
+        {
+            TakeDamage(1);
+            Debug.Log(gameObject.name + " hit by projectile");
+        }
+    }
 
     void OnCollisionStay(Collision collision)
     {

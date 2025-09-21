@@ -1,6 +1,6 @@
 using UnityEngine;
  
-public class ArcherShooter : MonoBehaviour
+public class ShootArrows : MonoBehaviour
 {
     [Header("Arrow Settings")]
     public GameObject arrowPrefab;   // Assign your arrow prefab in Inspector
@@ -9,6 +9,12 @@ public class ArcherShooter : MonoBehaviour
     private float lastFireTime = 0f;
     private float detectionRange = 10000f; // How far ahead to check
     public LayerMask enemyLayer;     // Assign your "Enemy" layer in Inspector
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Update()
     {
         if (IsEnemyInFront())
@@ -29,15 +35,19 @@ public class ArcherShooter : MonoBehaviour
 
         {
             Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green); // hit detected
+            animator.SetBool("isShooting", true);
             return true;
         }
 
         Debug.DrawRay(transform.position, transform.forward * detectionRange, Color.red); // no hit
+        animator.SetBool("isShooting", true);
         return false;
+        
     }
  
     void ShootArrow()
     {
+        
         // Just spawn the arrow prefab at firePoint
         Vector3 spawnPosition = transform.position +new Vector3(0, 1, 0); // Adjust spawn position if needed
         Instantiate(arrowPrefab, spawnPosition, transform.rotation);
