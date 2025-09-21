@@ -169,10 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 5154512622346898383, guid: 4d5b1e83690863f42b57cc06a856dc5a, type: 3}
-  firePoint: {fileID: 4093455417772905365}
   fireRate: 0.7
---- !u!4 &4093455417772905365 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-  m_PrefabInstance: {fileID: 4558867123979285630}
-  m_PrefabAsset: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
