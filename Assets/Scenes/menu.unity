@@ -2337,7 +2337,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Swords \n&\nSkeletons"
+  m_text: 'Skulls
+
+    &
+
+    Swords'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7ac433d933dabe747a7f7bedba3de2a1, type: 2}
   m_sharedMaterial: {fileID: 1482517149803822821, guid: 7ac433d933dabe747a7f7bedba3de2a1, type: 2}

@@ -1764,6 +1764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage
       objectReference: {fileID: 0}
+    - target: {fileID: 3360938925188842246, guid: 14ff82f097ab8f948bd78e92d987aaee, type: 3}
+      propertyPath: m_TagString
+      value: Melee
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 526259443069425547, guid: 14ff82f097ab8f948bd78e92d987aaee, type: 3}
@@ -2448,6 +2452,10 @@ PrefabInstance:
     - target: {fileID: 3712426996734675247, guid: 927407d7b21227671aa3447e500a42ab, type: 3}
       propertyPath: m_Name
       value: Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712426996734675247, guid: 927407d7b21227671aa3447e500a42ab, type: 3}
+      propertyPath: m_TagString
+      value: Melee
       objectReference: {fileID: 0}
     - target: {fileID: 4093455417772905365, guid: 927407d7b21227671aa3447e500a42ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4142,11 +4150,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995216908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d7d169e80a3198e9aa4bc0543a9db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooselevel: 0
   enemyPrefabs:
   - {fileID: 9085076285327095836, guid: 5edd21ba52663825a850282a1d5227d1, type: 3}
   - {fileID: 7459423286345051341, guid: 55aca193f4cbe4942b2aba5534309b8c, type: 3}
@@ -5474,7 +5483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 998640962692609807, guid: 1e0a8776943ad5f46a1ddedea04d36d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 998640962692609807, guid: 1e0a8776943ad5f46a1ddedea04d36d5, type: 3}
       propertyPath: m_LocalPosition.y

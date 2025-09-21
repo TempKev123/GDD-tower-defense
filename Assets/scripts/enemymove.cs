@@ -17,10 +17,10 @@ public class enemymove : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        //if (hp <= 0)
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (transform.position.z < -4 || transform.position.y < -1)
+        {
+           Destroy(gameObject);
+        }
     }
     private void OnEnable()
     {

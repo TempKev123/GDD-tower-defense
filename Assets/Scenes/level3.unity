@@ -1941,7 +1941,7 @@ Transform:
   m_GameObject: {fileID: 465914973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 22}
+  m_LocalPosition: {x: 0, y: 1, z: 22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1959,6 +1959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d7d169e80a3198e9aa4bc0543a9db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooselevel: 2
   enemyPrefabs:
   - {fileID: 9085076285327095836, guid: 5edd21ba52663825a850282a1d5227d1, type: 3}
   - {fileID: 5512122710430589242, guid: 96363faa043da1825902a719db8b734f, type: 3}
@@ -5936,7 +5937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 1
+  m_text: 'Level 3
 
     CLEAR'
   m_isRightToLeft: 0

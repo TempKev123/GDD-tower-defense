@@ -35,10 +35,13 @@ public class EnemyCollisionManager : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
+        Debug.Log("Taking Damage");
         if (collision.gameObject.CompareTag(deadlyTag))
         {
+            Debug.Log("level 2");
             if (Time.time - lastDamageTime >= damageInterval)
             {
+                Debug.Log("level 3");
                 TakeDamage(1);
                 Debug.Log(gameObject.name + " taking damage ");
                 lastDamageTime = Time.time;

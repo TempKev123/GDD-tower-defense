@@ -35,12 +35,10 @@ public class ShootArrows : MonoBehaviour
 
         {
             Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green); // hit detected
-            animator.SetBool("isShooting", true);
             return true;
         }
 
         Debug.DrawRay(transform.position, transform.forward * detectionRange, Color.red); // no hit
-        animator.SetBool("isShooting", true);
         return false;
         
     }

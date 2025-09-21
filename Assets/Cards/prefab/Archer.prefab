@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
       propertyPath: m_TagString
-      value: Ranged
+      value: Melee
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

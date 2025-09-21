@@ -280,6 +280,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ef8542f85d584ac991c510c819e7b91, type: 3}
       insertIndex: -1
       addedObject: {fileID: -5571371338216312720}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ef8542f85d584ac991c510c819e7b91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8415611760731348556}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ef8542f85d584ac991c510c819e7b91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2235611167942130235}
   m_SourcePrefab: {fileID: 100100000, guid: 0ef8542f85d584ac991c510c819e7b91, type: 3}
 --- !u!1 &9085076285327095836 stripped
 GameObject:
@@ -305,8 +311,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.0199552, y: 2.3403091, z: 1.9465575}
-  m_Center: {x: 0.009267092, y: 1.152909, z: -0.031790137}
+  m_Size: {x: 2.0199552, y: 2.3403091, z: 1.7436002}
+  m_Center: {x: 0.009267092, y: 1.152909, z: -0.13326886}
 --- !u!54 &5832439017681298128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -360,5 +366,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ac2964b6ed7ddc8b365c58881164de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 4
   damageInterval: 1
+--- !u!95 &-8415611760731348556
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085076285327095836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db54cd83ae0071348b8de40d7c7aa05f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2235611167942130235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085076285327095836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d0647a4c985c74eb423fb1a43396df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Melee
+  detectionRadius: 0.8
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  enableDebugLogs: 1
+  showDetectionGizmo: 1

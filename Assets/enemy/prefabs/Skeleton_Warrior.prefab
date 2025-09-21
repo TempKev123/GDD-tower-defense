@@ -344,6 +344,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
       insertIndex: -1
       addedObject: {fileID: -929846695872287705}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -621302921650861838}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8421750416704925761}
   m_SourcePrefab: {fileID: 100100000, guid: e4ca6b6cd153c3748a5c1b2042a8647e, type: 3}
 --- !u!1 &3013229725613435590 stripped
 GameObject:
@@ -383,8 +389,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8400906, y: 2.8806534, z: 1.7134871}
-  m_Center: {x: -0.024774356, y: 1.4433981, z: 0.026815247}
+  m_Size: {x: 1.8400906, y: 2.8806531, z: 1.5995281}
+  m_Center: {x: -0.024774356, y: 1.4433979, z: -0.030164102}
 --- !u!54 &30916562180438780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -426,3 +432,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 20
   damageInterval: 1
+--- !u!95 &-621302921650861838
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013229725613435590}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f91b2b415c2dd564382b9dc4ec27ec1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8421750416704925761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013229725613435590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d0647a4c985c74eb423fb1a43396df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Melee
+  detectionRadius: 0.9
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  enableDebugLogs: 1
+  showDetectionGizmo: 1
