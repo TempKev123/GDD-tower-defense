@@ -6,7 +6,8 @@ u6510099 SHANN NEIL ORDONEZ ESTABILLO
 u6411361 PACHARA CHOTIYANONT
 
 Introduction
-This project is a Unity-based tower defense game inspired by classic strategy mechanics. Players can deploy units using a drag-and-place grid system, collect resources, and defend against increasingly challenging waves of enemies. Featuring unique enemy types, stage transitions, boss fights
+This project is a Unity-based tower defense game inspired by classic strategy mechanics from games like Plants vs Zombies. Players can deploy units using a click-and-place grid system, collect resources from defeating foes, and defend against increasingly challenging waves of enemies. Featuring unique enemy types, including a boss.
+<img width="1339" height="743" alt="Screenshot from 2025-09-22 02-18-52" src="https://github.com/user-attachments/assets/272b5eb7-7501-4a9f-9029-643852eebcbe" />
 
 
 How to Play / Use
@@ -20,6 +21,8 @@ Defend against waves of enemies.
 Collect coins/sun to place more units.
 
 Progress through multiple stages with different enemy types and bosses.
+<img width="1339" height="743" alt="Screenshot from 2025-09-22 02-19-16" src="https://github.com/user-attachments/assets/e9b059e3-25d2-44a2-a354-1ad8a004f9cf" /><img width="1339" height="743" alt="Screenshot from 2025-09-22 02-20-22" src="https://github.com/user-attachments/assets/d6c520a4-04cc-4cc2-aebd-d30b469c823c" />
+
 
 
 Asset List
