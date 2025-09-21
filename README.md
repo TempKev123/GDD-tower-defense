@@ -22,7 +22,7 @@ Collect coins/sun to place more units.
 Progress through multiple stages with different enemy types and bosses.
 
 
->>>>>>>>Asset List<<<<<<
+>Asset List<
 Enemy: KayKit - Character Pack: Skeletons by Kay Lousberg-https://kaylousberg.itch.io/kaykit-skeletons
 
 Unit: KayKit - Character Pack: Adventurers by Kay Lousberg-https://kaylousberg.itch.io/kaykit-adventurers
