@@ -7,6 +7,8 @@ u6411361 PACHARA CHOTIYANONT
 
 Introduction
 This project is a Unity-based tower defense game inspired by classic strategy mechanics from games like Plants vs Zombies. Players can deploy units using a click-and-place grid system, collect resources from defeating foes, and defend against increasingly challenging waves of enemies. Featuring unique enemy types, including a boss.
+
+There are 3 Levels of increasing difficulty and differnt enviorment with differnet background music.
 <img width="1339" height="743" alt="Screenshot from 2025-09-22 02-18-52" src="https://github.com/user-attachments/assets/272b5eb7-7501-4a9f-9029-643852eebcbe" />
 
 
