@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEditor;
 #endif
 
-[ExecuteAlways]
+// [ExecuteAlways] ❌ เอาออก เพื่อกันไม่ให้ UI โดน snap ตอนแก้ใน Scene
 public class DragAndPlace : MonoBehaviour, IPointerClickHandler
 {
     [Header("Card Data")]
@@ -18,8 +18,8 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
     private GameObject previewModel;
 
     [Header("Grid Settings")]
-    public int tileSize = 1;                 // ขนาดแต่ละช่อง
-    public Vector3 tileOffset = Vector3.zero; // จุดเริ่ม grid (มุมซ้ายล่าง)
+    public int tileSize = 1;                 
+    public Vector3 tileOffset = Vector3.zero;
 
     private void Awake()
     {
@@ -29,7 +29,8 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
     private void Update()
     {
 #if UNITY_EDITOR
-        if (!EditorApplication.isPlaying)
+        // Snap ใน editor เฉพาะ object ที่ไม่ใช่ UI
+        if (!EditorApplication.isPlaying && !(transform is RectTransform))
         {
             SnapToGrid(transform);
         }
@@ -60,53 +61,47 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
     }
 
     // คลิกการ์ดเพื่อเริ่มวาง
-   public void OnPointerClick(PointerEventData eventData)
-{
-    // ถ้าไม่มี prefab หรือ cardData → ออก
-    if (cardData == null || cardData.prefab == null) return;
-
-    // เช็คว่ามีเหรียญพอไหม
-    if (!GameManager.Instance.CanAfford(cardData.cost))
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Not enough coins for: " + cardData.name);
-        return; // ❌ หยุด ไม่ให้วาง
-    }
+        if (cardData == null || cardData.prefab == null) return;
 
-    // ถ้าเหรียญพอ → ทำ preview
-    if (!isPlacing)
-    {
-        previewModel = Instantiate(cardData.prefab);
-        MakeTransparent(previewModel, 0.5f);
-        isPlacing = true;
-        Debug.Log("Preview active for: " + cardData.name);
-    }
-}
+        if (!GameManager.Instance.CanAfford(cardData.cost))
+        {
+            Debug.Log("Not enough coins for: " + cardData.name);
+            return;
+        }
 
+        if (!isPlacing)
+        {
+            previewModel = Instantiate(cardData.prefab);
+            MakeTransparent(previewModel, 0.5f);
+            isPlacing = true;
+            Debug.Log("Preview active for: " + cardData.name);
+        }
+    }
 
     // วางจริง
- private void FinalizePlacement()
-{
-    if (previewModel != null)
+    private void FinalizePlacement()
     {
-        // ตัดเหรียญออกตอนวางจริง
-        if (GameManager.Instance.CanAfford(cardData.cost))
+        if (previewModel != null)
         {
-            GameManager.Instance.SpendCoins(cardData.cost);
+            if (GameManager.Instance.CanAfford(cardData.cost))
+            {
+                GameManager.Instance.SpendCoins(cardData.cost);
 
-            MakeTransparent(previewModel, 1f);
-            previewModel = null;
-            isPlacing = false;
+                MakeTransparent(previewModel, 1f);
+                previewModel = null;
+                isPlacing = false;
 
-            Debug.Log("Placed " + cardData.name);
-        }
-        else
-        {
-            Debug.Log("Not enough coins at placement!");
-            CancelPlacement();
+                Debug.Log("Placed " + cardData.name);
+            }
+            else
+            {
+                Debug.Log("Not enough coins at placement!");
+                CancelPlacement();
+            }
         }
     }
-}
-
 
     // ยกเลิก
     private void CancelPlacement()
@@ -136,6 +131,9 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
 
     private void SnapToGrid(Transform t)
     {
+        // ข้ามถ้าเป็น UI (RectTransform)
+        if (t is RectTransform) return;
+
         t.position = GetSnappedPosition(t.position);
     }
 
@@ -143,7 +141,9 @@ public class DragAndPlace : MonoBehaviour, IPointerClickHandler
     {
         float snappedX = Mathf.Round((pos.x - tileOffset.x) / (tileSize * 2)) * (tileSize * 2) + tileOffset.x;
         float snappedZ = Mathf.Round((pos.z - tileOffset.z) / (tileSize * 2)) * (tileSize * 2) + tileOffset.z;
-            float snappedY = Mathf.Round((pos.y - tileOffset.y) / 2f) * 2f + tileOffset.y;
+
+        // ตายตัวบนพื้น grid
+        float snappedY = tileOffset.y;
 
         return new Vector3(snappedX, snappedY, snappedZ);
     }

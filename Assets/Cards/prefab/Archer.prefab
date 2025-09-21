@@ -5,7 +5,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
@@ -57,33 +56,25 @@ PrefabInstance:
       value: Ranged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: -695009955411471175, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-    - {fileID: -3606650129264159978, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-    - {fileID: 782705683434683602, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 440098947014289081}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -7468646913360069298}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 266940989061428404}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -4179217553767097514}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4201548149648749087}
   m_SourcePrefab: {fileID: 100100000, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
 --- !u!1 &3712426996734675247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f87ca7eec6d78da8c20b39449b0c5b, type: 3}
   m_PrefabInstance: {fileID: 4558867123979285630}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &266940989061428404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712426996734675247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &440098947014289081
 Animator:
   serializedVersion: 5
@@ -105,41 +96,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-7468646913360069298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3712426996734675247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d954780a2e6c98919e47cc2eb836d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileSize: 1
-  tileOffset: {x: 0, y: 0, z: 0}
---- !u!65 &266940989061428404
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3712426996734675247}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 2}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &-4179217553767097514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,11 +121,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3712426996734675247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3740577468de3044dbe4e462bbad3af8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7576f68e03b14c84091a90fe14199aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 5154512622346898383, guid: 4d5b1e83690863f42b57cc06a856dc5a, type: 3}
-  fireRate: 0.7
+  fireRate: 1
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
