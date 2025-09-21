@@ -4,7 +4,7 @@ Skulls and Sword Is Tower Defense in Unity create by
 u6510099 SUJIT DITYAM
 u6510099 SHANN NEIL ORDONEZ ESTABILLO
 u6411361 PACHARA CHOTIYANONT
-
+(A.K.A. Team FISTBUMP)
 Introduction
 This project is a Unity-based tower defense game inspired by classic strategy mechanics from games like Plants vs Zombies. Players can deploy units using a click-and-place grid system, collect resources from defeating foes, and defend against increasingly challenging waves of enemies. Featuring unique enemy types, including a boss.
 
