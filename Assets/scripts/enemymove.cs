@@ -6,6 +6,7 @@ public class enemymove : MonoBehaviour
 {
     //public int hp;
     public float speed;
+    public int coinvalue;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,14 @@ public class enemymove : MonoBehaviour
         //    Destroy(gameObject);
         //}
     }
-    /*
-    void takeDamage(int damage)
+    private void OnEnable()
     {
-        hp -= damage;
+        spawnmanager.activeEnemies++;
     }
-    */
+
+    private void OnDestroy()
+    {
+        spawnmanager.activeEnemies--;
+        GameManager.Instance.AddCoins(coinvalue);
+    }
 }

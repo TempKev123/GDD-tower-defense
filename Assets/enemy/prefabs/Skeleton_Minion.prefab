@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  coinvalue: 5
 --- !u!114 &-5571371338216312720
 MonoBehaviour:
   m_ObjectHideFlags: 0
